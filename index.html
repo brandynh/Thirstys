@@ -4,18 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <script src="./assets/js/script.js" defer></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+
+
 
     <title>Thirsty's</title>
-
+    <link rel="shortcut icon" type="image/jpg" href="./Assets/Images/favicon.png"/>
+ <!--Let browser know website is optimized for mobile-->
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
-
 <body>
     <header>
-        <div>
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo center"><img src="./Assets/Images/logoProject1.png" alt="Thirsty's logo"></a>
 
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+          </ul>
         </div>
+      </nav>
+    
+      <ul class="sidenav" id="mobile-demo">
+        <li><a href="#!">Search by Zipcode</a></li>
+        <li><a href="#!">Enter City Name</a></li>
+      </ul>
+    </nav>
     </header>
 
     <main>
@@ -37,6 +54,11 @@
         <input type="checkbox" id="currentLocation" name="currentLocation" value="">
         <label for="currentLocation"> Use Current Location?</label><br>
     </main>
-    
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <link rel="stylesheet" href="./Assets/stylesheet/style.css" />
+  <script src="./Assets/JS/script.js" defer></script>
 </body>
 </html>
