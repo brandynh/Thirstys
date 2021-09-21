@@ -39,7 +39,7 @@ section {
     font-weight: bolder;
     position: absolute;
     top: 25%;
-    left: 30%;
+    left: 33%;
     transform: translate(-50%, -50%);
     text-align: center;
     font-size: 10px;
@@ -47,15 +47,7 @@ section {
     
 }
 
-  .text p {
-      text-align: left;
-      position: absolute;
-      font-size: 20px;
-      top: 70%;
-      left: 0%;
-      font-family: 'Glory', sans-serif;
-      
-  }
+  
 
   article {
       height: 75px;
@@ -72,6 +64,7 @@ section {
 
   main {
       margin-left: 10px;
+      margin-bottom: 15px;
   }
 
   .card-header {
@@ -82,12 +75,18 @@ section {
       background-color: rgb(56, 16, 16);
   }
 
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-}
+  .page-footer {
+      background-color:rgb(56, 16, 16) ;
+      border-top: solid;
+      border-color: gold;
 
-main {
-  flex: 1 0 auto;
-}
+  }
+
+  /*display: flex;
+  min-height: 100vh;
+  flex-direction: column;*/
+
+
+
+  /*flex: 1 0 auto;*/
 
