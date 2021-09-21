@@ -22,7 +22,7 @@ nav {
 }
 
 
-section {
+.bg-image {
     height: 300px;
     width: 100%;
     text-align: center;
@@ -34,13 +34,13 @@ section {
 }
 
 
-.text {    
+.quote {    
     color:white;
     font-weight: bolder;
     position: absolute;
-    top: 25%;
-    left: 33%;
-    transform: translate(-50%, -50%);
+    top: 17%;
+    left: 37%;
+    transform: translate(-30%, -15%);
     text-align: center;
     font-size: 10px;
     font-family:'Glory', sans-serif;
@@ -49,11 +49,7 @@ section {
 
   
 
-  article {
-      height: 75px;
-      width: 100%;
-      margin-left: 10px;
-  }
+  
 
   .desc p {
       font-size: 20px;
@@ -65,6 +61,7 @@ section {
   main {
       margin-left: 10px;
       margin-bottom: 15px;
+      flex: 1 0 auto;
   }
 
   .card-header {
@@ -81,4 +78,10 @@ section {
       border-color: gold;
 
   }
+
+
+  /*display: flex;
+  min-height: 100vh;
+  flex-direction: column;*/
+
 
