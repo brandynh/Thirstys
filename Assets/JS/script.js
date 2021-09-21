@@ -62,36 +62,38 @@ function findByCity(userCity) {
 }
 
 //function gets users current location
-function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } else {
-    console.log("Geolocation is not supported by this browser.");
+function getNearby() {
+  //function gets users current location
+  function getLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+      console.log("Geolocation is not supported by this browser.");
+    }
   }
-}
 
-//The function displays the Lat and Longitude for users position
-function showPosition(position) {
-  console.log(
-    "Latitude: " +
-      position.coords.latitude +
-      " Longitude: " +
-      position.coords.longitude
-  );
-  console.log("I've got your position!");
-}
+  //The function displays the Lat and Longitude for users position
+  function showPosition(position) {
+    userLat = position.coords.latitude;
+    userLon = position.coords.longitude;
+    console.log("Latitude: " + userLat +
+      " Longitude: " + userLon);
+    console.log("I've got your position!");
 
-// Prompts user to allow or deny location access if allowed reveals nearby button
-navigator.geolocation.watchPosition(
-  function (position) {
+  }
+
+  // Prompts user to allow or deny location access if allowed reveals nearby button 
+  navigator.geolocation.watchPosition(function (position) {
     getLocation();
-    nearbyButtonDisplayEl.classList.remove("hide");
+    nearbyButtonEl.classList.add('hide');
   },
 
-  // If permission denied hides nearby button
-  function (error) {
-    if (error.code == error.PERMISSION_DENIED)
-      nearbyButtonDisplayEl.classList.add("hide");
-    console.log("you denied location access");
-  }
-);
+    // If permission denied hides nearby button
+    function (error) {
+      if (error.code == error.PERMISSION_DENIED)
+        nearbyButtonEl.classList.add('hide');
+        currentLocationLabelEl.classList.add('hide');
+      console.log("you denied location access");
+    });
+}
+nearbyButtonEl.addEventListener('click', getNearby);

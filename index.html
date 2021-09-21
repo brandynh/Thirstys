@@ -149,27 +149,12 @@
 
     <main>
 
-        <h3 class="card-header">Search by Zipcode</h3>
-        <form id="zipCode-form" class="card-body">
-          <label class="form-label" for="zipCode">Enter Zipcode</label>
-          <input name="zipCode" id="zipCode" type="text" class="form-input" />
-          <button type="submit" id='byZipBtn' class="btn">Get Brewery!</button>
-        </form>
-
-        <h3 class="card-header">Search by City</h3>
-        <form id="city-form" class="card-body">
-          <label class="form-label" for="city">Enter City Name</label>
-          <input name="city" id="city" type="text" class="form-input" />
-          <button type="submit" id="byCityBtn" class="btn">Get Brewery!</button>
-        </form>
-
-
-        <form id="nearby-form" class="card-body hide">
-          <button type="submit" id="nearbyBtn" class="btn">Search Nearby</button>
-        </form>
+        
+        <button type="submit" id="nearbyBtn" class="btn">Search Nearby</button>
 
         <input type="checkbox" id="currentLocation" name="currentLocation" value="">
-        <label for="currentLocation"> Use Current Location?</label><br>
+        <label for="currentLocation" id="nearbyLocation"> Use Current Location?</label><br>
+        
     </main>
 
     <footer class="page-footer">
@@ -197,6 +182,6 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <link rel="stylesheet" href="./Assets/stylesheet/style.css" />
-  <script src="./Assets/JS/script.js" defer></script>
+  <script src="./Assets/JS/script.js"></script>
 </body>
 </html>
