@@ -85,7 +85,7 @@ function getNearby() {
   // Prompts user to allow or deny location access if allowed reveals nearby button 
   navigator.geolocation.watchPosition(function (position) {
     getLocation();
-    nearbyButtonEl.classList.remove('hide');
+    nearbyButtonEl.classList.add('hide');
   },
 
     // If permission denied hides nearby button
