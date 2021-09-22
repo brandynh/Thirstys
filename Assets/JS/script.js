@@ -5,7 +5,6 @@ nearbyButtonDisplayEl = document.getElementById("nearby-form");
 document.addEventListener("DOMContentLoaded", function () {
   var elems = document.querySelectorAll(".sidenav");
   var instances = M.Sidenav.init(elems, {});
-
   var elems = document.querySelectorAll(".modal");
   var instances = M.Modal.init(elems, {});
 });
@@ -76,24 +75,24 @@ function getNearby() {
   function showPosition(position) {
     userLat = position.coords.latitude;
     userLon = position.coords.longitude;
-    console.log("Latitude: " + userLat +
-      " Longitude: " + userLon);
+    console.log("Latitude: " + userLat + " Longitude: " + userLon);
     console.log("I've got your position!");
-
   }
 
-  // Prompts user to allow or deny location access if allowed reveals nearby button 
-  navigator.geolocation.watchPosition(function (position) {
-    getLocation();
-    nearbyButtonEl.classList.add('hide');
-  },
+  // Prompts user to allow or deny location access if allowed reveals nearby button
+  navigator.geolocation.watchPosition(
+    function (position) {
+      getLocation();
+      nearbyButtonEl.classList.add("hide");
+    },
 
     // If permission denied hides nearby button
     function (error) {
       if (error.code == error.PERMISSION_DENIED)
-        nearbyButtonEl.classList.add('hide');
-        currentLocationLabelEl.classList.add('hide');
+        nearbyButtonEl.classList.add("hide");
+      currentLocationLabelEl.classList.add("hide");
       console.log("you denied location access");
-    });
+    }
+  );
 }
-nearbyButtonEl.addEventListener('click', getNearby);
+nearbyButtonEl.addEventListener("click", getNearby);
