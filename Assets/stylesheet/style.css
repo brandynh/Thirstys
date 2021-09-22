@@ -77,7 +77,15 @@ main {
   border-top: solid;
   border-color: gold;
 }
+.sidenav-trigger {
+  transform: translateX(0%) !important;
+}
 
-/*display: flex;
-  min-height: 100vh;
-  flex-direction: column;*/
+@media only screen and (min-width: 0px) {
+  header,
+  nav,
+  main,
+  footer {
+    padding-left: 0;
+  }
+}

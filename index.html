@@ -1,114 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Glory:ital,wght@1,794&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
-
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Glory:ital,wght@1,794&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Thirsty's</title>
-    <link rel="shortcut icon" type="image/jpg" href="./Assets/Images/favicon.png"/>
- <!--Let browser know website is optimized for mobile-->
- <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-</head>
-<body>
+    <link
+      rel="shortcut icon"
+      type="image/jpg"
+      href="./Assets/Images/favicon.png"
+    />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
     <header>
       <nav>
         <div class="nav-wrapper">
-          <a href="#!" class="brand-logo center"><img src="./Assets/Images/logoInWhiteWDepth.png" alt="Thirsty's logo"></a>
-          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-          <ul class="right">
+          <a href="#!" class="brand-logo center">
+            <img
+              src="./Assets/Images/logoInWhiteWDepth.png"
+              alt="Thirsty's logo"
+            />
+          </a>
+          <ul class="left">
+            <li>
+              <a
+                href="#"
+                data-target="mobile-demo"
+                class="sidenav-trigger show-on-large"
+              >
+                <i class="material-icons">search</i>
+              </a>
+            </li>
+          </ul>
         </div>
-    
-      <ul class="sidenav" id="mobile-demo">
-        <li><a class="waves-effect modal-trigger" href="#modal3">Enter City Name</a></li>
+      </nav>
 
-<!-- Modal Structure -->
-<div id="modal3" class="modal">
-  <div class="modal-content">
-    <div class="row">
-      <div class="col s12">
-        <div class="row">
-          <div class="input-field col s12">
-            <i class="material-icons prefix">location_on</i>
-            <input type="text" id="autocomplete-input" class="form-label">
-            <label for="autocomplete-input">Search by Zipcode</label>
+      <ul class="sidenav" id="mobile-demo">
+        <li>
+          <a class="waves-effect modal-trigger" href="#modal3">
+            Enter City Name
+          </a>
+        </li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+
+      <!-- Modal Structure -->
+      <div id="modal3" class="modal">
+        <div class="modal-content">
+          <div class="row">
+            <div class="col s12">
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">location_on</i>
+                  <input
+                    type="text"
+                    id="autocomplete-input"
+                    class="form-label"
+                  />
+                  <label for="autocomplete-input">Enter City Name</label>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat"
+            >Search</a
+          >
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="modal-footer">
-    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Search</a>
-  </div>
-</div>
-      </ul>
-    </nav>
     </header>
-    
     <div class="bg-image"></div>
 
+    <div class="quote">
+      <h1>"Let no one thirst for good beer"</h1>
+    </div>
 
-     <div class="quote">
-       <h1>"Let no one thirst for good beer"</h1>
-     </div>
-   </div>
-
-   
-     <div class="desc">
-       <div class=""></div>
-       <p>Thirsty's is designed to help identify brewery's near you. To find a brewery near you,enter the zip code or city of your choice.<br> Once you click "GET Brewery!" a map will appear showing the brewery's location.</p>
-     </div>
-  
-
-
-
-   
+    <div class="desc">
+      <div class=""></div>
+      <p>
+        Thirsty's is designed to help identify brewery's near you. To find a
+        brewery near you,enter the zip code or city of your choice.<br />
+        Once you click "GET Brewery!" a map will appear showing the brewery's
+        location.
+      </p>
+    </div>
 
     <main>
+      <button type="submit" id="nearbyBtn" class="btn">Search Nearby</button>
 
-        
-        <button type="submit" id="nearbyBtn" class="btn">Search Nearby</button>
-
-        <input type="checkbox" id="currentLocation" name="currentLocation" value="">
-        <label for="currentLocation" id="nearbyLocation"> Use Current Location?</label><br>
-        
+      <input
+        type="checkbox"
+        id="currentLocation"
+        name="currentLocation"
+        value=""
+      />
+      <label for="currentLocation" id="nearbyLocation">
+        Use Current Location?</label
+      ><br />
     </main>
 
     <footer class="page-footer">
       <div class="container">
         <!-- <div class="row"> -->
-          <div class="col l6 s12 center">
-            <h5 class="white-text">Powered by:</h5>
-            <p class="grey-text text-lighten-4"></p>
-          </div>
-          <div class="col l4 offset-l2 s12 center">
-            <ul>
-              <li><a class="grey-text text-lighten-3 center" href="https://materializecss.com/support-us.html"target="_blank" rel="noopener noreferrer">Materialize CSS</a></li>
-              <li><a class="grey-text text-lighten-3 center" href="https://developer.tomtom.com/maps-api"target="_blank" rel="noopener noreferrer">Tom Tom API</a></li>
-            </ul>
-          </div>
+        <div class="col l6 s12 center">
+          <h5 class="white-text">Powered by:</h5>
+          <p class="grey-text text-lighten-4"></p>
+        </div>
+        <div class="col l4 offset-l2 s12 center">
+          <ul>
+            <li>
+              <a
+                class="grey-text text-lighten-3 center"
+                href="https://materializecss.com/support-us.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Materialize CSS</a
+              >
+            </li>
+            <li>
+              <a
+                class="grey-text text-lighten-3 center"
+                href="https://developer.tomtom.com/maps-api"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Tom Tom API</a
+              >
+            </li>
+          </ul>
         </div>
       </div>
       <div class="footer-copyright">
-        <div class="container center">
-        © 2021 Copyright 
-        </div>
+        <div class="container center">© 2021 Copyright</div>
       </div>
     </footer>
-  
+
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <link rel="stylesheet" href="./Assets/stylesheet/style.css" />
-  <script src="./Assets/JS/script.js"></script>
-</body>
+    <link rel="stylesheet" href="./Assets/stylesheet/style.css" />
+    <script src="./Assets/JS/script.js"></script>
+  </body>
 </html>
