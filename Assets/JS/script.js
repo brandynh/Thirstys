@@ -4,6 +4,9 @@ nearbyButtonDisplayEl = document.getElementById("nearby-form");
 
 var searchButtonEl = document.getElementById("search-button");
 var userInputEl = document.getElementById("autocomplete-input");
+var liOneEl = document.getElementById("liOne");
+var liTwoEl = document.getElementById("liTwo");
+var liThreeEl = document.getElementById("liThree");
 var loc;
 
 document.addEventListener("DOMContentLoaded", function () {
