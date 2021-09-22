@@ -2,11 +2,15 @@ nearbyButtonEl = document.getElementById("nearbyBtn");
 byCityButtonEl = document.getElementById("byZipBtn");
 nearbyButtonDisplayEl = document.getElementById("nearby-form");
 
+var searchButtonEl = document.getElementById("search-button");
+var userInputEl = document.getElementById("autocomplete-input");
+var loc;
+
 document.addEventListener("DOMContentLoaded", function () {
   var elems = document.querySelectorAll(".sidenav");
   var instances = M.Sidenav.init(elems, {});
   var elems = document.querySelectorAll(".modal");
-  var instances = M.Modal.init(elems, {});
+  var searchByCityModal = M.Modal.init(elems, {});
 });
 
 // Grabs first 20 and lists out name and URL
@@ -95,4 +99,12 @@ function getNearby() {
     }
   );
 }
+
+function setLoc() {
+  loc = userInputEl.value;
+  console.log(`The location is set to: ${loc}`);
+}
+
 nearbyButtonEl.addEventListener("click", getNearby);
+
+searchButtonEl.addEventListener("click", setLoc);
