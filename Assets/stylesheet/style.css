@@ -81,6 +81,10 @@ main {
   transform: translateX(0%) !important;
 }
 
+/* TomTom Map Display */
+/* body, html { margin: 0; padding: 0; } */
+#map-div { width: 80vw; height: 100vh; }
+
 @media only screen and (min-width: 0px) {
   header,
   nav,

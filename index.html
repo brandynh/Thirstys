@@ -25,6 +25,12 @@
       rel="stylesheet"
     />
 
+    <!-- Must exist for TomTom API call -->
+    <!-- TomTom -->
+    <link rel='stylesheet' type='text/css' href='https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.5.0/maps/maps.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <!-- Must exist for TomTom API call -->
+  
     <title>Thirsty's</title>
     <link
       rel="shortcut icon"
@@ -64,9 +70,15 @@
             Enter City Name
           </a>
         </li>
-        <li id="liOne"></li>
+        <!-- <li id="liOne"></li>
         <li id="liTwo"></li>
-        <li id="liThree"></li>
+        <li id="liThree"></li> -->
+        <!-- Save City Searches -->
+        <li class="divider"></li>
+        <li><a href="#!" id="liOne"></a></li>
+        <li><a href="#!" id="liTwo"></a></li>
+        <li><a href="#!" id="liThree"></a></li>
+        <!-- Save City Searches -->
       </ul>
 
       <!-- Modal Structure -->
@@ -93,8 +105,7 @@
             href="#!"
             id="search-button"
             class="modal-close waves-effect waves-green btn-flat"
-            >Search</a
-          >
+            >Search</a>
         </div>
       </div>
     </header>
@@ -126,7 +137,18 @@
       <label for="currentLocation" id="nearbyLocation">
         Use Current Location?</label
       ><br />
+
+
+      <!-- These sections must exist for the dynamic cards to work and calling of the TomTom API -->
+      <!-- Card components dynamically created  -->
+      <div class="col s12 m7" id="card-container"></div> 
+      <!-- TomTom -->
+      <div id="map-div"></div>
+      <!-- These sections must exist for the dynamic cards to work and calling of the TomTom API -->
+
     </main>
+
+    <div id="map-div"></div>
 
     <footer class="page-footer">
       <div class="container">
@@ -166,6 +188,15 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link rel="stylesheet" href="./Assets/stylesheet/style.css" />
+
+     <!-- jQuery -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     <!-- Must exist for TomTom API components and services -->
+     <!-- TomTom -->
+     <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.5.0/services/services-web.min.js"></script>
+     <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.5.0/maps/maps-web.min.js"></script>
+     <!-- Must exist for TomTom API call -->
+
     <script src="./Assets/JS/script.js"></script>
   </body>
 </html>
