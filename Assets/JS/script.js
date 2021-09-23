@@ -43,6 +43,7 @@ function getNearbyInfo() {
 
   // Prompts user to allow or deny location access if allowed reveals nearby button 
   navigator.geolocation.watchPosition(function (position) {
+
     getLocation();
 
   },
@@ -82,9 +83,52 @@ function getNearbyInfo() {
         alert('Error');
       });
 
+    
+      getLocation();
+      
+  },
+
+      // If permission denied hides nearby button
+      function (error) {
+          if (error.code == error.PERMISSION_DENIED)
+              nearbyButtonEl.reset();
+          console.log("you denied location access");
+      });
+
+  function nearUser() {
+      var nearUserURL = "https://api.openbrewerydb.org/breweries?by_dist="+userLat+","+userLon;
+
+      fetch(nearUserURL)
+          .then(function (response) {
+              if (response.ok) {
+                  response.json().then(function (data) {
+
+                      for(i = 0; i < data.length; i++){
+                          var city = data[i].city;
+                          var name = data[i].name;
+                          var phone = data[i].phone;
+                          var postalCode = data[i].postal_code
+                          var state = data[i].state;
+                          var street = data[i].street;
+                          var website = data[i].website_url;
+                          setCardInfo(city, name, phone, postalCode, state, street, website);
+
+                      }
+                      console.log(data)
+                  });
+
+              } else {
+                  alert('Error: ' + response.statusText);
+              }
+          }).catch(function (error) {
+              alert('Error');
+          });
+
+
   }
 
 }
+
 
 function setCardInfoNearby(city, name, phone, postalCode, state, street, website) {
   var cardContainer = document.getElementById('card-container');
@@ -548,6 +592,11 @@ function setLoc(event) {
       }
     }
   }
+
+
+nearbyButtonEl.addEventListener("click", getNearbyInfo);
+
+
 
   // hanlde clicked elements; call function to handle displaying locations
   // info and map and save options
