@@ -19,38 +19,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function getNearbyInfo() {
 
-
+getLocation();
   function getLocation() {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(showPosition);
-    } else {
-      console.log("Geolocation is not supported by this browser.");
-    }
-  }
-
-  //The function displays the Lat and Longitude for users position
-  function showPosition(position) {
-    userLat = position.coords.latitude;
-    userLon = position.coords.longitude;
-    console.log("Latitude: " + position.coords.latitude +
-      " Longitude: " + position.coords.longitude);
-    console.log("I've got your position!");
-    nearUser();
-
-  }
-
-  // Prompts user to allow or deny location access if allowed reveals nearby button 
-  navigator.geolocation.watchPosition(function (position) {
-
-    getLocation();
-
-  },
-
-    // If permission denied hides nearby button
-    function (error) {
-      if (error.code == error.PERMISSION_DENIED)
-        console.log("you denied location access");
+    navigator.geolocation.getCurrentPosition(position => {
+      const { latitude, longitude} = position.coords;
+      userLat = latitude;
+      userLon = longitude;
+      nearUser();
     });
+  }
 
   function nearUser() {
     var nearUserURL = "https://api.openbrewerydb.org/breweries?by_dist=" + userLat + "," + userLon;
